@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills - Pedro Fabian Owono</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      color: #333;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #74ebd5;
+    }
+
+    /* Title with Animation */
+    .skills-title {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+      animation: slideInDown 1.5s ease-in-out;
+    }
+
+    /* Skills Section */
+    .skills-section {
+      padding: 40px 20px;
+    }
+
+    .skills-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .skills-card h3 {
+      font-size: 1.5rem;
+      color: #343a40;
+      margin-bottom: 15px;
+    }
+
+    .skills-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-card ul li {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* Tools Icons with Animation */
+    .tools-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .tool {
+      text-align: center;
+      flex: 1 1 100px;
+      animation: bounceIn 1.5s ease;
+    }
+
+    .tool i {
+      font-size: 2rem;
+      color: #74ebd5;
+    }
+
+    .tool p {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+    /* Animations */
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html" class="active">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="skills-title">My Skills and Expertise</div>
+  </header>
+
+  <main>
+    <section class="skills-section">
+      <!-- Technical Skills -->
+      <div class="skills-card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li><strong>Programming Languages:</strong> Python, C++, Java, JavaScript</li>
+          <li><strong>Web Development:</strong> HTML, CSS, Bootstrap, React.js</li>
+          <li><strong>Robotics & Embedded Systems:</strong> ROS2, Arduino, Raspberry Pi</li>
+          <li><strong>AI & Machine Learning:</strong> TensorFlow, PyTorch, OpenCV</li>
+          <li><strong>Tools:</strong> MATLAB, SolidWorks, Figma, Git</li>
+        </ul>
+      </div>
+
+      <!-- Core Competencies -->
+      <div class="skills-card">
+        <h3>Core Competencies</h3>
+        <ul>
+          <li>Design and development of autonomous robots with real-time navigation and mapping</li>
+          <li>Proficient in 3D modeling and printing for engineering applications</li>
+          <li>Hands-on experience in creating and integrating IoT systems</li>
+          <li>Software development with a focus on usability and performance</li>
+        </ul>
+      </div>
+
+      <!-- Notable Achievements -->
+      <div class="skills-card">
+        <h3>Notable Achievements</h3>
+        <ul>
+          <li>Designed and implemented the ANIAS robot for autonomous navigation</li>
+          <li>Developed a Car Rental System using Java and NetBeans</li>
+          <li>Created a machine vision-based hand gesture recognition system</li>
+          <li>Simulated digital signal processing systems for advanced noise reduction</li>
+        </ul>
+      </div>
+
+      <!-- Tools and Technologies -->
+      <div class="skills-card">
+        <h3>Tools & Technologies</h3>
+        <div class="tools-icons">
+          <div class="tool">
+            <i class="fab fa-python" title="Python"></i>
+            <p>Python</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-camera" title="OpenCV"></i>
+            <p>OpenCV</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-bolt" title="LTSpice"></i>
+            <p>LTSpice</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-vial" title="LabVIEW"></i>
+            <p>LabVIEW</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-sitemap" title="Simulink"></i>
+            <p>Simulink</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-cogs" title="SolidWorks"></i>
+            <p>SolidWorks</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-desktop" title="Tkinter"></i>
+            <p>Tkinter</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-palette" title="PyQtDesigner"></i>
+            <p>PyQtDesigner</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-microchip" title="VHDL"></i>
+            <p>VHDL</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-code" title="C Programming"></i>
+            <p>C Programming</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-code" title="C++ Programming"></i>
+            <p>C++ Programming</p>
+          </div>
+          <div class="tool">
+            <i class="fab fa-java" title="Java"></i>
+            <p>Java</p>
+          </div>
+          <div class="tool">
+            <i class="fab fa-r-project" title="R Programming"></i>
+            <p>R Programming</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-music" title="FL Studio"></i>
+            <p>FL Studio</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-cube" title="Blender"></i>
+            <p>Blender</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-print" title="3D Impression"></i>
+            <p>3D Impression</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-network-wired" title="Cisco Networking"></i>
+            <p>Cisco Networking</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-film" title="CapCut"></i>
+            <p>CapCut</p>
+          </div>
+          <div class="tool">
+            <i class="fab fa-figma" title="Figma"></i>
+            <p>Figma</p>
+          </div>
+          <div class="tool">
+            <i class="fab fa-wix" title="Wix"></i>
+            <p>Wix</p>
+          </div>
+          <div class="tool">
+            <i class="fas fa-project-diagram" title="NetSim"></i>
+            <p>NetSim</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pedro Fabian Owono. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>

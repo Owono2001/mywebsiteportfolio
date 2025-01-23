@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications - Pedro Fabian Owono</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #343a40;
+      padding: 1rem 0;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+      color: #007bff;
+    }
+
+    header nav ul li a.active {
+      color: #007bff;
+    }
+
+    .certifications-title {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+      animation: slideInDown 1.5s ease-in-out; /* Title animation added */
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .certifications-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin: 40px 0;
+      animation: slideUp 1s ease;
+    }
+
+    .certification-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: zoomIn 1s;
+    }
+
+    .certification-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .certification-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .certification-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      color: #007bff;
+    }
+
+    .certification-card p {
+      margin-bottom: 15px;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .certification-card a {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 20px;
+      color: #fff;
+      background: #007bff;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .certification-card a:hover {
+      background: #0056b3;
+    }
+
+    section h3 {
+      margin-top: 40px;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      background: #343a40;
+      color: #fff;
+      padding: 1rem 0;
+      margin-top: 40px;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Keyframes for slide-in effect */
+    @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="certifications.html" class="active">Certifications</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="certifications-title">Certifications</div>
+
+  <main>
+    <section class="certifications-section">
+
+      <!-- Current Certifications -->
+      <div class="certifications-grid">
+        <div class="certification-card">
+          <img src="assets/matlab_certification.png" alt="MATLAB Certification">
+          <h3>MATLAB Onramp Certification</h3>
+          <p>Learned the fundamentals of MATLAB programming through the official MathWorks course.</p>
+          <a href="https://drive.google.com/drive/folders/1KD5ySGl614XLZPIwkp52pa8w7RDkHuke" target="_blank" class="btn">View Certification</a>
+        </div>
+      </div>
+
+      <!-- Ongoing Certifications -->
+      <section class="certifications-progress">
+        <h3>Ongoing Certifications</h3>
+        <p>I am currently working on obtaining certifications in the following areas. These will soon be added to my portfolio:</p>
+        <ul>
+          <li>Information Security (InfoSec)</li>
+          <li>Critical Thinking for Better Judgment and Decision-Making</li>
+          <li>Introducción a SQL</li>
+          <li>Introducing Music Research</li>
+          <li>AI-Powered Marketer</li>
+          <li>Introduction to HTML</li>
+          <li>Machine Learning with Python</li>
+          <li>Responsive Web Design</li>
+          <li>Data Analysis with Python</li>
+        </ul>
+      </section>
+
+      <!-- Lost Certifications -->
+      <section class="lost-certifications">
+        <h3>Lost Certifications</h3>
+        <p>Unfortunately, I was unable to retain some of my past certifications. However, the knowledge and skills gained are reflected in my projects and experience. As I continue to grow, I aim to re-validate these skills with updated certifications.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pedro Fabian Owono. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>

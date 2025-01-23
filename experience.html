@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Pedro Fabian Owono</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      color: #333;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #74ebd5;
+    }
+
+    .experience-title {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0;
+      animation: slideInDown 1.5s ease-in-out;
+    }
+
+    @keyframes slideInDown {
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .experience-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .experience-logo img {
+      max-width: 150px;
+      border-radius: 10px;
+    }
+
+    .experience-content {
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .experience-content h3 {
+      font-size: 1.8rem;
+      color: #343a40;
+    }
+
+    .experience-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    /* Slideshow Section Styles */
+    .slideshow-section {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #9face6, #74ebd5);
+      color: white;
+    }
+
+    .slideshow-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+      animation: fade 1.5s;
+    }
+
+    .slide img,
+    .slide video {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .slide p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      user-select: none;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .prev {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .next {
+      right: 0;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    footer {
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experience.html" class="active">Experience</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="experience-section">
+      <h2 class="experience-title">Experience</h2>
+      <div class="experience-card">
+        <div class="experience-logo">
+          <img src="assets/apu_logo.png" alt="APU Logo">
+        </div>
+        <div class="experience-content">
+          <h3>Engineer Intern</h3>
+          <p><strong>Asia Pacific University of Technology and Innovation (APU / APIIT)</strong> · Internship</p>
+          <p><em>Jun 2024 - Sep 2024 · 4 months</em></p>
+          <p><em>Malaysia · On-site</em></p>
+          <p>As an intern at CREDIT, I actively contributed to the design and development of robotic systems, focusing on both the physical and functional aspects. I assisted in designing the robot's body and closely monitored the 3D printing process to ensure precision and quality. Additionally, I played a key role in mapping the robot's movements, contributing to its overall functionality.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slideshow-section">
+      <h3 class="slideshow-title">Internship Gallery</h3>
+  
+      <div class="slideshow-container" id="picture-slideshow">
+        <div class="slide fade">
+          <img src="assets/Teams.jpg" alt="Internship Team">
+          <p>Internship Team</p>
+        </div>
+        <div class="slide fade">
+          <img src="assets/Robot_Assembling.jpg" alt="Robot Assembling">
+          <p>Robot Assembling</p>
+        </div>
+        <div class="slide fade">
+          <img src="assets/Assembling_Training.jpg" alt="Assembling Training">
+          <p>Assembling Training</p>
+        </div>
+      </div>
+  
+      <div class="slideshow-container" id="video-slideshow">
+        <div class="slide fade">
+          <video autoplay muted>
+            <source src="assets/robot_Fully.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Robot Fully Assembled</p>
+        </div>
+        <div class="slide fade">
+          <video autoplay muted>
+            <source src="assets/robot_demo1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Robot Navigation Demo 1</p>
+        </div>
+        <div class="slide fade">
+          <video autoplay muted>
+            <source src="assets/robot_demo2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p>Robot Navigation Demo 2</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pedro Fabian Owono. All Rights Reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </footer>
+</body>
+</html>
+
+  <script>
+    let pictureIndex = 0;
+    function showPictures() {
+      const pictures = document.querySelectorAll("#picture-slideshow .slide");
+      pictures.forEach((pic) => (pic.style.display = "none"));
+      pictureIndex++;
+      if (pictureIndex > pictures.length) {
+        pictureIndex = 1;
+      }
+      pictures[pictureIndex - 1].style.display = "block";
+      setTimeout(showPictures, 3000);
+    }
+    showPictures();
+
+    let videoIndex = 0;
+    function showVideos() {
+      const videos = document.querySelectorAll("#video-slideshow .slide");
+      videos.forEach((vid) => {
+        vid.style.display = "none";
+        const videoTag = vid.querySelector("video");
+        if (videoTag) videoTag.pause();
+      });
+      videoIndex++;
+      if (videoIndex > videos.length) {
+        videoIndex = 1;
+      }
+      const currentSlide = videos[videoIndex - 1];
+      currentSlide.style.display = "block";
+      const videoTag = currentSlide.querySelector("video");
+      if (videoTag) {
+        videoTag.currentTime = 0;
+        videoTag.play();
+        videoTag.onended = showVideos;
+      }
+    }
+    showVideos();
+  </script>
+</body>
+</html>
