@@ -4,25 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Experience - Pedro Fabian Owono</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #74ebd5, #9face6);
-      color: #333;
+      background: linear-gradient(135deg, #1e293b, #4b5563);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #343a40;
+      background-color: #111827;
       color: white;
       padding: 1rem 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     nav ul {
@@ -41,40 +45,54 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #74ebd5;
+      color: #38bdf8;
+      transform: scale(1.1);
     }
 
     .experience-title {
-      background-color: #343a40;
+      font-size: 2.8rem;
+      font-weight: bold;
       color: white;
       text-align: center;
       padding: 20px 0;
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 0;
-      animation: slideInDown 1.5s ease-in-out;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid white;
+      animation: typing 3.5s steps(50, end), blink 0.5s step-end infinite;
     }
 
-    @keyframes slideInDown {
+    @keyframes typing {
       from {
-        transform: translateY(-100%);
-        opacity: 0;
+        width: 0;
       }
       to {
-        transform: translateY(0);
-        opacity: 1;
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
       }
     }
 
     .experience-section {
       text-align: center;
-      padding: 60px 20px;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 60px 5%;
+      background: #1f2937;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      margin: 20px auto;
+      animation: fadeInUp 1.5s ease;
     }
 
     .experience-card {
@@ -86,8 +104,9 @@
     }
 
     .experience-logo img {
-      max-width: 150px;
-      border-radius: 10px;
+      max-width: 120px;
+      border-radius: 12px;
+      animation: zoomIn 1.5s ease;
     }
 
     .experience-content {
@@ -97,26 +116,31 @@
 
     .experience-content h3 {
       font-size: 1.8rem;
-      color: #343a40;
+      color: #38bdf8;
+      margin-bottom: 10px;
     }
 
     .experience-content p {
       font-size: 1rem;
       line-height: 1.6;
+      color: #d1d5db;
       margin: 10px 0;
     }
 
-    /* Slideshow Section Styles */
     .slideshow-section {
       text-align: center;
-      padding: 2rem;
-      background: linear-gradient(135deg, #9face6, #74ebd5);
+      padding: 40px 5%;
+      background: linear-gradient(135deg, #2563eb, #4b5563);
       color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      margin: 20px auto;
     }
 
     .slideshow-title {
       font-size: 1.8rem;
       margin-bottom: 1rem;
+      color: #38bdf8;
     }
 
     .slideshow-container {
@@ -124,14 +148,13 @@
       max-width: 800px;
       margin: 0 auto;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     .slide {
       display: none;
       text-align: center;
-      animation: fade 1.5s;
     }
 
     .slide img,
@@ -139,7 +162,7 @@
       width: 100%;
       height: 450px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .slide p {
@@ -148,55 +171,46 @@
       color: #fff;
     }
 
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
+    footer {
+      text-align: center;
+      background-color: #111827;
       color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      user-select: none;
-      border-radius: 0 3px 3px 0;
+      padding: 20px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
     }
 
-    .prev {
-      left: 0;
-      border-radius: 3px 0 0 3px;
+    footer .social-links a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    .next {
-      right: 0;
-      border-radius: 0 3px 3px 0;
+    footer .social-links a:hover {
+      color: #38bdf8;
+      transform: scale(1.2);
     }
 
-    .prev:hover,
-    .next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    @keyframes fade {
+    @keyframes fadeInUp {
       from {
-        opacity: 0.4;
+        opacity: 0;
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
-    footer {
-      text-align: center;
-      background-color: #343a40;
-      color: white;
-      padding: 20px 0;
-    }
-
-    footer p {
-      margin: 0;
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -208,67 +222,67 @@
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="experience.html" class="active">Experience</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="experience-title">Professional Experience</div>
   </header>
 
   <main>
     <section class="experience-section">
-      <h2 class="experience-title">Experience</h2>
       <div class="experience-card">
         <div class="experience-logo">
           <img src="assets/apu_logo.png" alt="APU Logo">
         </div>
         <div class="experience-content">
           <h3>Engineer Intern</h3>
-          <p><strong>Asia Pacific University of Technology and Innovation (APU / APIIT)</strong> · Internship</p>
+          <p><strong>Asia Pacific University</strong> · Internship</p>
           <p><em>Jun 2024 - Sep 2024 · 4 months</em></p>
-          <p><em>Malaysia · On-site</em></p>
-          <p>As an intern at CREDIT, I actively contributed to the design and development of robotic systems, focusing on both the physical and functional aspects. I assisted in designing the robot's body and closely monitored the 3D printing process to ensure precision and quality. Additionally, I played a key role in mapping the robot's movements, contributing to its overall functionality.</p>
+          <p>Malaysia · On-site</p>
+          <p>
+            Worked on robotic systems' design, 3D printing, and motion mapping. Enhanced robotic functionality and participated in development milestones.
+          </p>
         </div>
       </div>
     </section>
 
     <section class="slideshow-section">
-      <h3 class="slideshow-title">Internship Gallery</h3>
-  
+      <h3 class="slideshow-title">Internship Picture Gallery</h3>
       <div class="slideshow-container" id="picture-slideshow">
         <div class="slide fade">
           <img src="assets/Teams.jpg" alt="Internship Team">
           <p>Internship Team</p>
         </div>
         <div class="slide fade">
-          <img src="assets/Robot_Assembling.jpg" alt="Robot Assembling">
-          <p>Robot Assembling</p>
+          <img src="assets/Robot_Assembling.jpg" alt="Robot Assembly">
+          <p>Robot Assembly</p>
         </div>
         <div class="slide fade">
-          <img src="assets/Assembling_Training.jpg" alt="Assembling Training">
-          <p>Assembling Training</p>
+          <img src="assets/Assembling_Training.jpg" alt="Training">
+          <p>Training</p>
         </div>
       </div>
-  
+    </section>
+
+    <section class="slideshow-section">
+      <h3 class="slideshow-title">Internship Video Gallery</h3>
       <div class="slideshow-container" id="video-slideshow">
         <div class="slide fade">
-          <video autoplay muted>
+          <video autoplay muted loop>
             <source src="assets/robot_Fully.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <p>Robot Fully Assembled</p>
         </div>
         <div class="slide fade">
-          <video autoplay muted>
+          <video autoplay muted loop>
             <source src="assets/robot_demo1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <p>Robot Navigation Demo 1</p>
         </div>
         <div class="slide fade">
-          <video autoplay muted>
+          <video autoplay muted loop>
             <source src="assets/robot_demo2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
           </video>
           <p>Robot Navigation Demo 2</p>
         </div>
@@ -279,49 +293,32 @@
   <footer>
     <p>&copy; 2025 Pedro Fabian Owono. All Rights Reserved.</p>
     <div class="social-links">
-      <a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
     </div>
   </footer>
-</body>
-</html>
 
   <script>
     let pictureIndex = 0;
-    function showPictures() {
-      const pictures = document.querySelectorAll("#picture-slideshow .slide");
-      pictures.forEach((pic) => (pic.style.display = "none"));
-      pictureIndex++;
-      if (pictureIndex > pictures.length) {
-        pictureIndex = 1;
-      }
-      pictures[pictureIndex - 1].style.display = "block";
-      setTimeout(showPictures, 3000);
-    }
-    showPictures();
-
     let videoIndex = 0;
-    function showVideos() {
-      const videos = document.querySelectorAll("#video-slideshow .slide");
-      videos.forEach((vid) => {
-        vid.style.display = "none";
-        const videoTag = vid.querySelector("video");
-        if (videoTag) videoTag.pause();
-      });
-      videoIndex++;
-      if (videoIndex > videos.length) {
-        videoIndex = 1;
-      }
-      const currentSlide = videos[videoIndex - 1];
-      currentSlide.style.display = "block";
-      const videoTag = currentSlide.querySelector("video");
-      if (videoTag) {
-        videoTag.currentTime = 0;
-        videoTag.play();
-        videoTag.onended = showVideos;
+
+    function showSlides(slideType, containerId) {
+      const slides = document.querySelectorAll(`#${containerId} .slide`);
+      slides.forEach(slide => (slide.style.display = "none"));
+
+      if (slideType === "picture") {
+        pictureIndex++;
+        if (pictureIndex > slides.length) pictureIndex = 1;
+        slides[pictureIndex - 1].style.display = "block";
+      } else if (slideType === "video") {
+        videoIndex++;
+        if (videoIndex > slides.length) videoIndex = 1;
+        slides[videoIndex - 1].style.display = "block";
       }
     }
-    showVideos();
+
+    setInterval(() => showSlides("picture", "picture-slideshow"), 3000);
+    setInterval(() => showSlides("video", "video-slideshow"), 5000);
   </script>
 </body>
 </html>

@@ -4,24 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Pedro Fabian Owono</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #74ebd5, #9face6);
-      color: #333;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #343a40;
+      background-color: #111827;
       color: white;
       padding: 1rem 0;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     nav ul {
@@ -40,110 +45,144 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #74ebd5;
+      color: #38bdf8;
+      transform: scale(1.1);
     }
 
     .about-title {
-      background-color: #343a40;
+      font-size: 2.8rem;
+      font-weight: bold;
       color: white;
       text-align: center;
       padding: 20px 0;
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 0;
-      animation: slideInDown 1.5s ease-in-out; /* Title animation added */
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 4px solid white;
+      animation: typing 3.5s steps(40, end), blink 0.5s step-end infinite;
+      background-color: #111827;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes blink {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
     }
 
     .about-section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
-      animation: fadeIn 1.5s;
     }
 
     .profile-pic {
       width: 250px;
       height: 250px;
-      margin: 20px auto;
       border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      object-fit: cover;
-      animation: zoomIn 1.5s;
-      display: block;
+      border: 6px solid #38bdf8;
+      margin: 20px auto;
+      animation: zoomIn 1.5s ease;
     }
 
     .about-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      animation: fadeInUp 1.5s;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    .about-info p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 15px;
+    .about-container h2 {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 20px;
     }
 
-    .about-info ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .about-info ul li a {
-      text-decoration: none;
-      color: #343a40;
+    .about-container p {
       font-size: 1.2rem;
-      transition: color 0.3s;
+      line-height: 1.8;
+      color: #d1d5db;
     }
 
-    .about-info ul li a:hover {
-      color: #74ebd5;
+    .highlight {
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .skills-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .skills-icons i {
+      font-size: 3rem;
+      color: #38bdf8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .skills-icons i:hover {
+      transform: scale(1.2);
+      color: #60a5fa;
+    }
+
+    .social-links {
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      font-size: 2rem;
+      color: #38bdf8;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #60a5fa;
     }
 
     footer {
       text-align: center;
-      background-color: #343a40;
+      background-color: #111827;
       color: white;
       padding: 20px 0;
-      margin-top: 50px;
-      font-size: 0.9rem;
-    }
-
-    /* Keyframes for slide-in effect */
-    @keyframes slideInDown {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+      margin-top: auto;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
     }
 
     @keyframes zoomIn {
-      from { opacity: 0; transform: scale(0.8); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
   <header>
     <nav>
       <ul>
@@ -151,44 +190,31 @@
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="experience.html">Experience</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="about-title">About Me</div>
   </header>
-
-  <!-- About Me Title -->
-  <div class="about-title">About Me</div>
 
   <main>
     <section class="about-section">
       <img src="assets/profile2.jpg" alt="Pedro Fabian Owono" class="profile-pic">
       <div class="about-container">
-        <div class="about-info">
-          <p>
-            I am a computer engineering student with a passion for software development and innovation, pursuing my degree with Honors at the Asia Pacific University of Technology and Innovation. Driven by creativity and technical excellence, I combine engineering expertise to bring unique perspectives to everything I do.
-          </p>
-          <p>
-            I enjoy tackling challenges, learning new technologies, and collaborating on projects that have a meaningful impact. With a strong background in programming, project management, and electronics, I strive to create solutions that are both practical and innovative.
-          </p>
-          <p><strong>Quick Links:</strong></p>
-          <ul>
-            <li><a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-            <li><a href="mailto:owonoondomangue@gmail.com"><i class="fas fa-envelope"></i> Email</a></li>
-            <li><a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          </ul>
-        </div>
+        <h2>Hi, I'm Pedro Fabian Owono</h2>
+        <p>
+          A <span class="highlight">passionate engineering student</span> combining technical expertise with creativity to deliver innovative solutions. 
+          Pursuing <span class="highlight">Computer Engineering</span> at the Asia Pacific University of Technology and Innovation, I have been dedicated to developing projects that merge technology with real-world applications.
+        </p>
+        <p>
+          Beyond engineering, I have a strong interest in <span class="highlight">music production</span> and <span class="highlight">robotics design</span>. I am driven by the pursuit of impactful projects that make a difference.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Pedro Fabian Owono. All Rights Reserved.</p>
-    <div class="social-links">
-      <a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    </div>
   </footer>
 </body>
 </html>

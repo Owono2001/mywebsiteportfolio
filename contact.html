@@ -4,27 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Pedro Fabian Owono</title>
-  <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    /* General Styles */
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #74ebd5, #9face6);
-      color: #333;
+      background: linear-gradient(135deg, #1e293b, #4b5563);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     header {
-      background-color: #343a40;
+      background-color: #111827;
       color: white;
       padding: 1rem 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     nav ul {
@@ -43,85 +46,30 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      font-size: 1.1rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #74ebd5;
+      color: #38bdf8;
+      transform: scale(1.1);
     }
 
+    /* Contact Title */
     .contact-title {
-      background-color: #343a40;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: bold;
-      margin: 0;
-      animation: slideInDown 1.5s ease-in-out;
-    }
-
-    .contact-section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    /* Social Media Section Styling */
-    .social-media-section {
-      text-align: center;
-      padding: 40px 20px;
-      background: linear-gradient(135deg, #9face6, #74ebd5);
       color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .social-media-section h3 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .social-media-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .social-media-links a {
-      text-decoration: none;
-      font-size: 2rem;
-      color: white;
-      background: #343a40;
-      padding: 15px;
-      border-radius: 50%;
-      transition: transform 0.3s, background 0.3s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .social-media-links a:hover {
-      transform: scale(1.2);
-      background: #74ebd5;
-    }
-
-    .social-media-links i {
-      vertical-align: middle;
-    }
-
-    footer {
       text-align: center;
-      background-color: #343a40;
-      color: white;
       padding: 20px 0;
-      margin-top: 50px;
+      background-color: #1e293b;
+      border-bottom: 4px solid #38bdf8;
+      animation: fadeInDown 1.5s ease;
     }
 
-    @keyframes slideInDown {
+    @keyframes fadeInDown {
       from {
-        transform: translateY(-100%);
+        transform: translateY(-50px);
         opacity: 0;
       }
       to {
@@ -129,10 +77,165 @@
         opacity: 1;
       }
     }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #1f2937;
+      border-radius: 12px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      max-width: 900px;
+    }
+
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #d1d5db;
+    }
+
+    /* Form Styles */
+    .contact-container {
+      margin: 20px auto;
+      background: #111827;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .form-row {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-row label {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #38bdf8;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .form-row input,
+    .form-row textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #4b5563;
+      border-radius: 8px;
+      background: #1f2937;
+      color: #d1d5db;
+      font-size: 1rem;
+    }
+
+    .form-row textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #38bdf8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #60a5fa;
+      transform: scale(1.05);
+    }
+
+    /* Contact Details */
+    .contact-details {
+      margin-top: 30px;
+    }
+
+    .contact-details h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    .contact-details p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .contact-details a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-details a:hover {
+      text-decoration: underline;
+    }
+
+    /* Social Media Section */
+    .social-media-section {
+      margin-top: 40px;
+      padding: 30px;
+      background: #1f2937;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .social-media-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #38bdf8;
+    }
+
+    .social-media-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .social-media-links a {
+      text-decoration: none;
+      font-size: 1.8rem;
+      color: white;
+      background: #1e293b;
+      padding: 12px;
+      border-radius: 50%;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .social-media-links a:hover {
+      background: #38bdf8;
+      transform: scale(1.2);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #111827;
+      color: white;
+      padding: 20px 0;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
   <header>
     <nav>
       <ul>
@@ -140,81 +243,50 @@
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="experience.html">Experience</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
+    <div class="contact-title">Contact Me</div>
   </header>
-
-  <!-- Contact Me Title -->
-  <div class="contact-title">Contact Me</div>
 
   <main>
     <section class="contact-section">
-      <p>If you'd like to reach out, please feel free to use the form below or contact me through the provided details. I look forward to hearing from you!</p>
+      <p>Let's collaborate! Feel free to reach out via the form below or connect with me directly.</p>
       <div class="contact-container">
-        <form action="https://formspree.io/f/xqaezjbb" method="POST" class="contact-form">
-          <table>
-            <tr>
-              <td><label for="name">Full Name</label></td>
-              <td><input type="text" id="name" name="name" placeholder="Your full name" required></td>
-            </tr>
-            <tr>
-              <td><label for="email">Email Address</label></td>
-              <td><input type="email" id="email" name="_replyto" placeholder="Your email address" required></td>
-            </tr>
-            <tr>
-              <td><label for="message">Message</label></td>
-              <td><textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea></td>
-            </tr>
-          </table>
+        <form action="https://formspree.io/f/xqaezjbb" method="POST">
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+          </div>
           <button type="submit" class="btn">Send Message</button>
         </form>
-        <div class="contact-details">
-          <h3>Contact Info</h3>
-          <p><strong>Phone:</strong> <a href="tel:+60177817784">+60177817784</a></p>
-          <p><strong>Email:</strong> <a href="mailto:owonoondomangue@gmail.com">owonoondomangue@gmail.com</a></p>
-          <p><strong>GitHub:</strong> <a href="https://github.com/Owono2001" target="_blank">Owono2001</a></p>
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/60177817784" target="_blank">Chat on WhatsApp</a></p>
-        </div>
       </div>
     </section>
 
-    <!-- Social Media Section -->
     <section class="social-media-section">
       <h3>Connect with Me on Social Media</h3>
       <div class="social-media-links">
-        <a href="https://www.instagram.com/owono2001/?hl=en" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.facebook.com/owono2001" target="_blank" title="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.snapchat.com/add/pedromangue24" target="_blank" title="Snapchat">
-          <i class="fab fa-snapchat-ghost"></i>
-        </a>
-        <a href="https://open.spotify.com/playlist/1ovl1EfATYpVidXAP4d0nH?utm_medium=share&utm_source=linktree" target="_blank" title="Spotify">
-          <i class="fab fa-spotify"></i>
-        </a>
-        <a href="https://x.com/owono_pedro" target="_blank" title="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://discord.com/channels/@me" target="_blank" title="Discord">
-          <i class="fab fa-discord"></i>
-        </a>
-      </div>
+      <a href="https://www.instagram.com/owono2001/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/owono2001" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.snapchat.com/add/pedromangue24" target="_blank" title="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+      <a href="https://open.spotify.com/playlist/1ovl1EfATYpVidXAP4d0nH?utm_medium=share&utm_source=linktree" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+      <a href="https://x.com/owono_pedro" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://discord.com/channels/@me" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+    </div>
     </section>
-
-
   </main>
-    
+
   <footer>
     <p>&copy; 2025 Pedro Fabian Owono. All Rights Reserved.</p>
-    <div class="social-links">
-      <a href="https://github.com/Owono2001" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/pedrofondomangue/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-    </div>
   </footer>
 </body>
 </html>
